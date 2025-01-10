@@ -1,7 +1,12 @@
-const functionOne = () => {
+class Circle {
+
+}
+
+class BankAccount {
 
 }
 
 module.exports = {
-  functionOne
-}
+  Circle,
+  BankAccount,
+};
