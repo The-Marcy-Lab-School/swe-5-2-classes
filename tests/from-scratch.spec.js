@@ -204,28 +204,28 @@ describe(testSuiteName, () => {
   it('BankAccount - the BankAccount class has a getTotalHoldings method and NO additional public class properties', () => {
     // these are property names given to EVERY class by default
     const defaultObjectPropertyNames = [
-      "length",
-      "name",
-      "prototype",
-    ]
+      'length',
+      'name',
+      'prototype',
+    ];
 
     // we expect your BankAccount class to have those default properties
     // and the getTotalHoldings method. You should NOT have any public
     // class property for the total holdings value (but it can be private!)
     const expectedPropertyNames = [
       'getTotalHoldings',
-      ...defaultObjectPropertyNames
-    ]
+      ...defaultObjectPropertyNames,
+    ];
 
     expect(Object.getOwnPropertyNames(BankAccount).sort()).toEqual(expectedPropertyNames.sort());
 
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
-  it('BankAccount - tracks total holdings accross all BankAccount instances', () => {
+  it('BankAccount - tracks total holdings across all BankAccount instances', () => {
     // The current holdings will be !== 0 because of the prior tests utilizing
     // The deposit and withdraw instance methods. So we'll get the starting
-    // holdings as a baseline, rounding to 2 decimals to handle floating point 
+    // holdings as a baseline, rounding to 2 decimals to handle floating point
     // precision errors
     const totalHoldingsBaseline = +BankAccount.getTotalHoldings().toFixed(2);
 
