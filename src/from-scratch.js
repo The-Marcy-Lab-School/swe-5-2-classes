@@ -1,7 +1,13 @@
-const functionOne = () => {
+/* eslint-disable max-classes-per-file */
+class Circle {
+
+}
+
+class BankAccount {
 
 }
 
 module.exports = {
-  functionOne
-}
+  Circle,
+  BankAccount,
+};
