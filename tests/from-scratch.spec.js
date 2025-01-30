@@ -223,6 +223,7 @@ describe(testSuiteName, () => {
   });
 
   it('BankAccount - tracks total holdings across all BankAccount instances', () => {
+    expect(typeof BankAccount.getTotalHoldings()).toBe('number');
     expect(BankAccount.getTotalHoldings()).not.toBe(NaN);
     
     // The current holdings will be !== 0 because of the prior tests utilizing
