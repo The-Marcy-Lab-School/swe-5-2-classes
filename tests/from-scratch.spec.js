@@ -223,6 +223,8 @@ describe(testSuiteName, () => {
   });
 
   it('BankAccount - tracks total holdings across all BankAccount instances', () => {
+    expect(BankAccount.getTotalHoldings()).not.toBe(NaN);
+    
     // The current holdings will be !== 0 because of the prior tests utilizing
     // The deposit and withdraw instance methods. So we'll get the starting
     // holdings as a baseline, rounding to 2 decimals to handle floating point
